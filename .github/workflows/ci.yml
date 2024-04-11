@@ -14,7 +14,7 @@ jobs:
     - name: Checkout repository  
       uses: actions/checkout@v4
 
-    - mane: Set up Python   # set up de un entorno para python
+    - name: Set up Python   # set up de un entorno para python
       uses: actions/setup-python@v4
       with:
         python-version: 3.8
