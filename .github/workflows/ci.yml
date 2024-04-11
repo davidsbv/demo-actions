@@ -1,0 +1,24 @@
+name: Python CI
+
+on:
+  push: # Cuando se hace un push on push
+    branches: [ main ] # Cambia "main" si tu rama principal tiene otro nombre.
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build: # crea una instanica de un ordenador
+
+    runs-ong: ubuntu-latest  # máquina virtual con ubuntu
+    steps:
+    - name: Checkout repository  
+      uses: actions/checkout@v4
+
+    - mane: Set up Python   # set up de un entorno para python
+      uses: actions/setup-python@v4
+      with:
+        python-version: 3.8
+
+    - name: Run test   # ejecutar pruebas que están en run: python -m unittest test_suma.py
+      run:
+        python -m unittest test_suma.py
