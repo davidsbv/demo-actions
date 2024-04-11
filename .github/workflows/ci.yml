@@ -9,7 +9,7 @@ on:
 jobs:
   build: # crea una instanica de un ordenador
 
-    runs-ong: ubuntu-latest  # máquina virtual con ubuntu
+    runs-on: ubuntu-latest  # máquina virtual con ubuntu
     steps:
     - name: Checkout repository  
       uses: actions/checkout@v4
